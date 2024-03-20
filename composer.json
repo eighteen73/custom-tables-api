@@ -1,0 +1,30 @@
+{
+  "name": "eighteen73/custom-tables-api",
+  "description": "A helper library for registering WordPress custom table CRUD pages with a simpler API.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Eighteen73\\CustomTablesApi\\": "includes/classes/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.0",
+    "wpackagist-plugin/cmb2": "^2.0"
+  },
+  "require-dev": {
+    "eighteen73/wordpress-coding-standards": "^2.0.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/installers": true
+    }
+  },
+  "scripts": {
+    "test": [
+      "phpcs"
+    ]
+  }
+}

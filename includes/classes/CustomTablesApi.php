@@ -241,7 +241,7 @@ class CustomTablesApi {
 		}
 	}
 
-	public function get( int $id ): array
+	public function get( int $id ): array|\stdClass
 	{
 		global $ct_registered_tables;
 

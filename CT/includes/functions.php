@@ -595,8 +595,6 @@ function ct_insert_object( $object_data, $wp_error = false ) {
 
         if ( false === $wpdb->insert( $ct_table->db->table_name, $object_data ) ) {
 
-			dd($wpdb->last_error);
-
             if ( $wp_error ) {
                 return new WP_Error('db_insert_error', __('Could not insert object into the database'), $wpdb->last_error);
             } else {

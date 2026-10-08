@@ -570,7 +570,9 @@ if ( ! class_exists( 'CT_Table' ) ) :
             }
 
             foreach ( $args as $property_name => $property_value ) {
-                $this->$property_name = $property_value;
+                if ( property_exists( $this, $property_name ) ) {
+                    $this->$property_name = $property_value;
+                }
             }
 
             $this->singular  = $args['singular'];
